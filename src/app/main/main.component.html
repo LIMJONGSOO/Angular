@@ -1,0 +1,32 @@
+<div style="width: 100%; height: 50px; background: red;">
+  <span [routerLink]="['/main/menu1']">메뉴1</span>
+  <span [routerLink]="['/main/menu2']">메뉴2</span>
+  <span [routerLink]="['/main/menu3']">메뉴3</span>
+  <span [routerLink]="['/observable']">Observable Event Http</span>
+</div>
+<div class="main-wrapper">
+  <h1>데이터 바인딩 Interpolation</h1>
+  {{data}}
+  <p #p>test area</p>
+  <router-outlet></router-outlet>
+  <div>
+    <h1>@Input @Output @ViewChild</h1>
+    <app-menu1 [data]="data" (childEvent)="removeData($event)"></app-menu1>
+    <button (click)="toggle()">toggle event</button>
+    <button (click)="changeData()">changeData event</button>
+  </div>
+
+  <div>
+    <h1>@ContentChild @ContentChildren</h1>
+    <app-menu2>
+      <app-menu1 #menu1></app-menu1>
+      <footer>Footer Content</footer>
+      <header>Header Content</header>
+    </app-menu2>
+  </div>
+
+  <div>
+    <h1>LifeCycle</h1>
+    <app-menu4 [data]="data"></app-menu4>
+  </div>
+</div>

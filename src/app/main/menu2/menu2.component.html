@@ -1,0 +1,9 @@
+<h2>menu2</h2>>
+<ng-content select="header"></ng-content>
+<ng-content select="footer"></ng-content>
+
+<div>
+    <p>dataService 데이터 공유 - 2</p>
+    <p>message: {{ message }}</p>
+    <input type="text" (input)= "message = $event.target.value" placeholder="message">
+</div>
