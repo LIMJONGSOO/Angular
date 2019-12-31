@@ -1,0 +1,33 @@
+<form [formGroup]="userForm" novalidate>
+    <div>
+        <input type="text" formControlName="userid" placeholder="user id">
+    </div>
+    <div formGroupName="passwordGroup">
+        <div>
+           <input type="password" formControlName="password" placeholder="password"> 
+        </div>
+        <div>
+            <input type="password" formControlName="confirmPassword" placeholder="confirm password">
+        </div>
+    </div>
+</form>
+<pre>{{ userForm.value | json }}</pre>
+<pre>{{ userForm.status }}</pre>
+<pre>{{ userForm.controls.passwordGroup.errors?.match | json }}</pre>
+formbuilder
+<form [formGroup]="formBuilderUserForm" novalidate>
+    <div>
+        <input type="text" formControlName="userid" placeholder="user id">
+    </div>
+    <div formGroupName="passwordGroup">
+        <div>
+           <input type="password" formControlName="password" placeholder="password"> 
+        </div>
+        <div>
+            <input type="password" formControlName="confirmPassword" placeholder="confirm password">
+        </div>
+    </div>
+</form>
+<pre>{{ formBuilderUserForm.value | json }}</pre>
+<pre>{{ formBuilderUserForm.status }}</pre>
+<pre>{{ formBuilderUserForm.controls.passwordGroup.errors?.match | json }}</pre>

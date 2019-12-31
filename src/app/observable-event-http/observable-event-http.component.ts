@@ -1,6 +1,6 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { FormControl } from '@angular/forms';
-import { HttpClient } from '@angular/common/http'
+import { HttpClient } from '@angular/common/http';
 
 import { Subscription, Observable, of, throwError } from 'rxjs';
 import { debounceTime, switchMap, map, tap, catchError } from 'rxjs/operators';

@@ -8,6 +8,8 @@ import { IsDevProvider, ServiceProvider } from '../../service/factoryprovider/fa
 import { AppConfig, APP_CONFIG, AppConfigProvider } from '../../service/injectiontoken/app.config';
 //Rxjs
 import { Observable, Subject } from 'rxjs';
+//Http
+import { HttpService } from '../../service/http/http.service';
 
 @Component({
   selector: 'app-main',
@@ -28,6 +30,7 @@ export class MainComponent implements OnInit {
 
   constructor(private classProviderServiceService: ClassProviderServiceService,
               private rootClassProviderServiceService: RootClassProviderServiceService,
+              private httpService: HttpService,
               @Inject('CONFIG') public config: number,
               @Inject(APP_CONFIG) public appConfig: AppConfig,
               @Optional() public testService: Menu1Component ) {
@@ -39,6 +42,7 @@ export class MainComponent implements OnInit {
     console.log('constructor', this.p);
     console.log('InjectionToken ', appConfig);
     console.log('@Optional 선택적 의존성 주입 ', this.testService ? testService.data : 'test');
+    httpService.getTodos();
    }
 
   ngOnInit() {

@@ -9,13 +9,15 @@ import {MainModule} from './main/main.module';
 import { ObservableEventHttpComponent } from './observable-event-http/observable-event-http.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { FormComponent } from './form/form.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     MainComponent,
-    ObservableEventHttpComponent
+    ObservableEventHttpComponent,
+    FormComponent
   ],
   imports: [
     BrowserModule,
