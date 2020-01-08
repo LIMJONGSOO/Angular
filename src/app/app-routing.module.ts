@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import {LoginComponent} from './login/login.component';
 import {MainComponent} from './main/main.component';
-import { ObservableEventHttpComponent } from './observable-event-http/observable-event-http.component';
+import { ObservableEventHttpComponent } from './main/observable-event-http/observable-event-http.component';
 import { FormComponent } from './form/form.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 

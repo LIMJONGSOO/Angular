@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { MainComponent } from './main/main.component';
 import {MainModule} from './main/main.module';
-import { ObservableEventHttpComponent } from './observable-event-http/observable-event-http.component';
+import { ObservableEventHttpComponent } from './main/observable-event-http/observable-event-http.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { FormComponent } from './form/form.component';
