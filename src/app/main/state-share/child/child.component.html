@@ -1,13 +1,8 @@
-<div *ngIf="view">
-    <p>child works!</p>
+<div *ngIf="view" style="border: 1px solid black; margin:10px; padding:10px;">
+    <p>child area</p>
     <p #p>test area</p>
     <button (click)="test()">output event</button>
-
-    <div>
-        <p>dataService 데이터 공유 - 1</p>
-        <p>message: {{ message }}</p>
-        <input type="text" (input)= "message = $event.target.value" placeholder="message">
-        <p>child data: {{ data }}</p>
-        
-    </div>
+    <p>child data: {{ data }}</p>
+    <p>message: {{ message }}</p>
+    <input type="text" (input)= "message = $event.target.value" placeholder="message">
 </div>

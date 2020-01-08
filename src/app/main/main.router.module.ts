@@ -5,9 +5,11 @@ import { DataBindingComponent} from './data-binding/data-binding.component';
 import { StateShareComponent} from './state-share/state-share.component';
 import { ContentComponent} from './content/content.component';
 import { LifeCycleComponent} from './life-cycle/life-cycle.component';
+import { EventHttpComponent } from './event-http/event-http.component';
 import { ObservableEventHttpComponent } from './observable-event-http/observable-event-http.component';
 import { FormComponent } from './form/form.component';
-import { NgrxDemoComponent } from './ngrx-demo/ngrx-demo.component'
+import { NgrxDemoComponent } from './ngrx-demo/ngrx-demo.component';
+import { ProviderComponent } from './provider/provider.component';
 
 export const MainRoutes: Routes = [
   {
@@ -18,6 +20,8 @@ export const MainRoutes: Routes = [
       { path: 'stateshare', component: StateShareComponent },
       { path: 'content', component: ContentComponent },
       { path: 'liftcycle', component: LifeCycleComponent },
+      { path: 'provider', component: ProviderComponent },
+      { path: 'http', component: EventHttpComponent },
       { path: 'observable', component: ObservableEventHttpComponent },
       { path: 'form', component: FormComponent },
       { path: 'ngrx', component: NgrxDemoComponent },

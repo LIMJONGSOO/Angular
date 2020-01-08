@@ -10,7 +10,7 @@ interface Todo {
   providedIn: 'root'
 })
 export class HttpService {
-  url = 'http://localhost:3000/todos';
+  url = 'http://localhost:3000/todos'; // json-server --watch db.json
   todos: Todo[];
 
   constructor(public http: HttpClient) { }

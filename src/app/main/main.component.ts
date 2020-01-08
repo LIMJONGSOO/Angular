@@ -1,24 +1,13 @@
 import { Component, OnInit, ViewChild, ElementRef, AfterViewInit, Inject, Optional } from '@angular/core';
-//Class Privider
-import { RootClassProviderServiceService, ClassProviderServiceService } from '../../service/classprovider/class-provider-service.service';
-// Factory Provider
-import { IsDevProvider, ServiceProvider } from '../../service/factoryprovider/factory.service.provider';
-// InjectionToken
-import { AppConfig, APP_CONFIG, AppConfigProvider } from '../../service/injectiontoken/app.config';
 //Rxjs
 import { Observable, Subject } from 'rxjs';
-//Http
-import { HttpService } from '../../service/http/http.service';
 
 @Component({
   selector: 'app-main',
   templateUrl: './main.component.html',
   styleUrls: ['./main.component.scss'],
   providers: [
-    IsDevProvider,
-    ServiceProvider,
-    { provide: 'CONFIG', useValue: 1000 },
-    AppConfigProvider
+    { provide: 'CONFIG', useValue: 1000 }
   ]
 })
 export class MainComponent implements OnInit {

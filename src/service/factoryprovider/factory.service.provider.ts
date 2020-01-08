@@ -13,6 +13,6 @@ export const ServiceProvider = {
 
 export const IsDevProvider = {
    provide: 'isDev',
-   useValue: true
+   useValue: false
  };
 

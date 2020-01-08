@@ -1,8 +1,10 @@
 <h2>state-share works!</h2>
-<div>
-    <h3>@Input @Output @ViewChild</h3>
-    <app-child [data]="data" (childEvent)="removeData($event)"></app-child>
+<h3>@Input @Output @ViewChild</h3>
+<div style="border: 1px solid black; margin:10px; padding:10px;">
+    <p>parent area</p>
     <p>parent data: {{ data }}</p>
     <button (click)="toggle()">toggle event</button>
-    <button (click)="changeData()">changeData event</button>
+    <button (click)="changeData()">change Child Data</button>
+    <button (click)="initData()">init parent Data</button>
+    <app-child [data]="data" (childEvent)="removeData($event)"></app-child>
 </div>

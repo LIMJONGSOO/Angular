@@ -14,12 +14,16 @@ import { reducers, metaReducers } from './store/reducers';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { environment } from '../environments/environment';
 import { AuthEffects } from './store/effects/auth.effects';
+import { EventHttpComponent } from './main/event-http/event-http.component';
+import { ProviderComponent } from './main/provider/provider.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    MainComponent
+    MainComponent,
+    EventHttpComponent,
+    ProviderComponent
   ],
   imports: [
     BrowserModule,
