@@ -1,28 +1,26 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { Menu1Component } from './menu1/menu1.component';
-import { Menu2Component } from './menu2/menu2.component';
-import { Menu3Component } from './menu3/menu3.component';
-import { Menu4Component } from './menu4/menu4.component';
-import {MainRouterModule} from './main.router.module'; 
+import {MainRouterModule} from './main.router.module';
+import { DataBindingComponent } from './data-binding/data-binding.component';
+import { StateShareComponent } from './state-share/state-share.component';
+import { ChildComponent } from './state-share/child/child.component';
+import { ContentComponent } from './content/content.component';
+import { ContentChildComponent } from './content/content-child/content-child.component';
+import { LifeCycleComponent } from './life-cycle/life-cycle.component'; 
 
 @NgModule({
   imports: [
     CommonModule,
-    MainRouterModule 
+    MainRouterModule
   ],
   declarations: [
-    Menu1Component,
-    Menu2Component,
-    Menu3Component,
-    Menu4Component
+    DataBindingComponent,
+    StateShareComponent,
+    ChildComponent,
+    ContentComponent,
+    ContentChildComponent,
+    LifeCycleComponent
   ],
-  exports: [
-    Menu1Component,
-    Menu2Component,
-    Menu3Component,
-    Menu4Component
-  ]
-
+  exports: []
 })
 export class MainModule { }

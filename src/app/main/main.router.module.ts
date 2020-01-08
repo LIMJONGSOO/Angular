@@ -1,21 +1,20 @@
 import { Routes, RouterModule } from '@angular/router';
 
 import {MainComponent} from './main.component';
-import {Menu1Component} from './menu1/menu1.component';
-import {Menu2Component} from './menu2/menu2.component';
-import {Menu3Component} from './menu3/menu3.component';
-import {Menu4Component} from './menu4/menu4.component';
-
+import {DataBindingComponent} from './data-binding/data-binding.component';
+import {StateShareComponent} from './state-share/state-share.component';
+import {ContentComponent} from './content/content.component';
+import {LifeCycleComponent} from './life-cycle/life-cycle.component';
 
 export const MainRoutes: Routes = [
   {
     path: 'main',
     component: MainComponent,
     children: [
-      { path: 'menu1', component: Menu1Component },
-      { path: 'menu2', component: Menu2Component },
-      { path: 'menu3', component: Menu3Component },
-      { path: 'menu4', component: Menu4Component },
+      { path: 'databinding', component: DataBindingComponent },
+      { path: 'statusshare', component: StateShareComponent },
+      { path: 'content', component: ContentComponent },
+      { path: 'liftcycle', component: LifeCycleComponent },
     ]
   }
 ];

@@ -1,27 +1,25 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-import { DataService } from '../../../service/data/data.service';
+import { DataService } from '../../../../service/data/data.service';
 
 @Component({
-  selector: 'app-menu1',
-  templateUrl: './menu1.component.html',
-  styleUrls: ['./menu1.component.scss']
+  selector: 'app-child',
+  templateUrl: './child.component.html',
+  styleUrls: ['./child.component.scss']
 })
-export class Menu1Component implements OnInit {
-
+export class ChildComponent implements OnInit {
   view = true;
   @Input() data: string;
-  data2: string;
   @Output() childEvent = new EventEmitter<string>();
 
   constructor(private dataService: DataService) {
     this.data = 'child data';
-    this.data2 = 'child data2';
-   }
+  }
 
-  ngOnInit() { }
+  ngOnInit() {
+  }
 
   test() {
-    this.data = 'child data';
+    this.data = 'child change data';
     this.childEvent.emit(this.data);
   }
 

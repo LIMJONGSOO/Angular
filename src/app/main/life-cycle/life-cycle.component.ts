@@ -3,22 +3,22 @@ import { Component, Input, OnChanges, OnInit, DoCheck, AfterContentInit,
 
 // tslint:disable-next-line: no-conflicting-lifecycle
 @Component({
-  selector: 'app-menu4',
-  templateUrl: './menu4.component.html',
-  styleUrls: ['./menu4.component.scss']
+  selector: 'app-life-cycle',
+  templateUrl: './life-cycle.component.html',
+  styleUrls: ['./life-cycle.component.scss']
 })
-export class Menu4Component implements OnChanges, OnInit, DoCheck, AfterContentInit,
+export class LifeCycleComponent implements OnChanges, OnInit, DoCheck, AfterContentInit,
   AfterContentChecked, AfterViewInit, AfterViewChecked, OnDestroy {
 
   @Input() data: string;
 
   constructor() {
-    console.log('Menu4Conponent start');
+    console.log('LifeCycleComponent start');
     console.log('[constructor]');
     console.log(`data: ${this.data}`);
     this.data = 'Test';
     console.log(`data: ${this.data}`);
-   }
+  }
 
   ngOnChanges(changes: SimpleChanges) {
     console.log('[OnChanges]');
@@ -53,6 +53,6 @@ export class Menu4Component implements OnChanges, OnInit, DoCheck, AfterContentI
 
   ngOnDestroy() {
     console.log('[OnDestroy]');
-    console.log('Menu4Conponent end');
+    console.log('LifeCycleComponent end');
   }
 }

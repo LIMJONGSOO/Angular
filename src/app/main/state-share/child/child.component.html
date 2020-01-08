@@ -1,0 +1,13 @@
+<div *ngIf="view">
+    <p>child works!</p>
+    <p #p>test area</p>
+    <button (click)="test()">output event</button>
+
+    <div>
+        <p>dataService 데이터 공유 - 1</p>
+        <p>message: {{ message }}</p>
+        <input type="text" (input)= "message = $event.target.value" placeholder="message">
+        <p>child data: {{ data }}</p>
+        
+    </div>
+</div>

@@ -1,5 +1,4 @@
 import { Component, OnInit, ViewChild, ElementRef, AfterViewInit, Inject, Optional } from '@angular/core';
-import { Menu1Component } from './menu1/menu1.component';
 //Class Privider
 import { RootClassProviderServiceService, ClassProviderServiceService } from '../../service/classprovider/class-provider-service.service';
 // Factory Provider
@@ -24,26 +23,9 @@ import { HttpService } from '../../service/http/http.service';
 })
 export class MainComponent implements OnInit {
 
-  @ViewChild(Menu1Component, {static: false}) menu1: Menu1Component;
   @ViewChild('p', {static: false}) p: ElementRef;
-  data: string;
 
-  constructor(private classProviderServiceService: ClassProviderServiceService,
-              private rootClassProviderServiceService: RootClassProviderServiceService,
-              private httpService: HttpService,
-              @Inject('CONFIG') public config: number,
-              @Inject(APP_CONFIG) public appConfig: AppConfig,
-              @Optional() public testService: Menu1Component ) {
-    this.data = 'test';
-
-    console.log(`root class provider say '${rootClassProviderServiceService.sayHi()}'`);
-    console.log(`factory class provider say '${classProviderServiceService.sayHi()}'`);//ServiceProvider에서 factory provider를 통해서 받음
-    console.log(`config is ${config}`);
-    console.log('constructor', this.p);
-    console.log('InjectionToken ', appConfig);
-    console.log('@Optional 선택적 의존성 주입 ', this.testService ? testService.data : 'test');
-    httpService.getTodos();
-   }
+  constructor() { }
 
   ngOnInit() {
 
@@ -83,18 +65,6 @@ export class MainComponent implements OnInit {
   // tslint:disable-next-line: use-lifecycle-interface
   ngAfterViewInit() {
     console.log('afterViewInit', this.p);
-  }
-
-  removeData(data: string) {
-    this.data = data;
-  }
-
-  toggle() {
-    this.menu1.view = !this.menu1.view;
-  }
-
-  changeData() {
-    this.menu1.changeData('parent data');
   }
 }
 

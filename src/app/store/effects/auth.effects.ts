@@ -22,7 +22,7 @@ export class AuthEffects {
           map((person) => {
             const name: string = person.name;
             return new authActions.SetAuths({
-              userName: name.replace(" ", ""),
+              userName: name.replace(' ', ''),
               friendlyName: name
             });
           })
