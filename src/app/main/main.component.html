@@ -1,25 +1,15 @@
-<div style="width: 100%; background: red;">
-  <div>
-    <span [routerLink]="['/main/databinding']">Data Binding</span>
-  </div>
-  <div>
-    <span [routerLink]="['/main/statusshare']">Status Share</span>
-  </div>
-  <div>
-    <span [routerLink]="['/main/content']">Content</span>
-  </div>
-  <div>
-    <span [routerLink]="['/main/liftcycle']">LifeCycle</span>
-  </div>
-  <div>
-    <span [routerLink]="['/main/observable']">Observable Event Http</span>
-  </div>
-  <div>
-    <span [routerLink]="['/main/form']">Form</span>
-  </div>
-  <div>
-    <span [routerLink]="['/main/ngrx']">NgRx demo</span>
-  </div>
+
+<h1>Choose the Angular Tutorial...</h1>
+<div style="border: 1px solid black;">
+  <ol>
+    <li [routerLink]="['/main/databinding']">Data Binding</li>
+    <li [routerLink]="['/main/stateshare']">State Share</li>
+    <li [routerLink]="['/main/content']">Content</li>
+    <li [routerLink]="['/main/liftcycle']">LifeCycle</li>
+    <li [routerLink]="['/main/observable']">Observable Event Http</li>
+    <li [routerLink]="['/main/form']">Form</li>
+    <li [routerLink]="['/main/ngrx']">NgRx demo</li>
+  </ol>
 </div>
 <div class="main-wrapper">
   <router-outlet></router-outlet>

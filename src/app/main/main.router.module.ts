@@ -15,7 +15,7 @@ export const MainRoutes: Routes = [
     component: MainComponent,
     children: [
       { path: 'databinding', component: DataBindingComponent },
-      { path: 'statusshare', component: StateShareComponent },
+      { path: 'stateshare', component: StateShareComponent },
       { path: 'content', component: ContentComponent },
       { path: 'liftcycle', component: LifeCycleComponent },
       { path: 'observable', component: ObservableEventHttpComponent },
