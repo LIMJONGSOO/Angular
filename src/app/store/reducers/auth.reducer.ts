@@ -6,8 +6,8 @@ export interface State {
 }
 
 export const initialState: State = {
-  userName: null,
-  friendlyName: null
+  userName: 'Researching...',
+  friendlyName: 'Researching...'
 };
 
 export function reducer(state = initialState, action: authActions.AuthActions): State {

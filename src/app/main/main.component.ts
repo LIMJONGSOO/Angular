@@ -43,7 +43,7 @@ export class MainComponent implements OnInit {
       } catch(e) {
         observer.error(e);
       } finally {
-        //구독 해지 될 때 호출되는 콜백 함수
+        // 구독 해지 될 때 호출되는 콜백 함수
         return () => console.log('Unsubscribed!');
       }
     }
@@ -68,9 +68,9 @@ export class MainComponent implements OnInit {
   }
 }
 
-//Unicast
+// Unicast
 const coldObservable$ = Observable.create(
-  observer => observer.next(Math.random())
+  (  observer: { next: (arg0: number) => any; }) => observer.next(Math.random())
 );
 
 // Cold observable을 구독하는 모든 옵저버는 자신만을 위해 독립적으로 실하는 옵저버블을 갖게 된다 
@@ -82,7 +82,7 @@ coldObservable$.subscribe(
   value => console.log(`2nd Cold observable's observer: ${value}`)
 );
 
-//MultiCast
+// MultiCast
 const subject = new Subject();
 const hotObservable$ = subject.asObservable();
 
