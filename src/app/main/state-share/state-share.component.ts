@@ -6,18 +6,21 @@ import { ChildComponent } from './child/child.component';
   templateUrl: './state-share.component.html',
   styleUrls: ['./state-share.component.scss'],
 })
-export class StateShareComponent implements OnInit {
+export class StateShareComponent implements OnInit, AfterViewInit {
   @ViewChild(ChildComponent, {static: false}) child: ChildComponent;
-  @ViewChild('p', {static: false}) p: ElementRef;
+  @ViewChild('viewchild', {static: false}) viewchild: ElementRef;
   data: string;
 
   constructor() {
     this.data = 'parent';
-
-    console.log('constructor', this.p);
   }
 
   ngOnInit() { }
+
+  ngAfterViewInit() {
+    console.log('parent component viewChild', this.viewchild);
+    console.log(this.viewchild.nativeElement.getAttribute('id'));
+  }
 
   removeData(data: string) {
     this.data = data;

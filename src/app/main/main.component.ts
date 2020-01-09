@@ -58,8 +58,11 @@ export class MainComponent implements OnInit {
 }
 
 // Unicast
+// tslint:disable-next-line: deprecation
 const coldObservable$ = Observable.create(
-  (  observer: { next: (arg0: number) => any; }) => observer.next(Math.random())
+  (  observer: { next: (arg0: number) => any; }) => {
+    return observer.next(Math.random());
+  }
 );
 
 // Cold observable을 구독하는 모든 옵저버는 자신만을 위해 독립적으로 실하는 옵저버블을 갖게 된다 

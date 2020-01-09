@@ -1,7 +1,7 @@
 <h2>state-share works!</h2>
 <h3>@Input @Output @ViewChild</h3>
 <div style="border: 1px solid black; margin:10px; padding:10px;">
-    <p>parent area</p>
+    <p #viewchild id="viewchild">parent area</p>
     <p>parent data: {{ data }}</p>
     <button (click)="toggle()">toggle event</button>
     <button (click)="changeData()">change Child Data</button>
