@@ -11,13 +11,11 @@ import { Observable, Subject } from 'rxjs';
   ]
 })
 export class MainComponent implements OnInit {
-
   @ViewChild('p', {static: false}) p: ElementRef;
 
   constructor() { }
 
   ngOnInit() {
-
     // 옵저버블이 구독될 떄 호출되는 구독 함수
     const subscriber = (observer) => {
       try {
