@@ -1,3 +1,17 @@
 <h2>data-binding works!</h2>
-<h3>데이터 바인딩 Interpolation</h3>
-{{data}}
+
+
+<div style="border: 1px solid black; margin:10px; padding:10px;">
+    <h3>데이터 바인딩 Interpolation</h3>
+    {{data}}
+</div>
+
+<div style="border: 1px solid black; margin:10px; padding:10px;">
+    <p>data 입력 </p> 
+    <input type="text" (input)= "data = $event.target.value" placeholder="data">
+</div>
+    
+<div style="border: 1px solid black; margin:10px; padding:10px;">
+    <p>ngModel data 양방향 바인딩 </p> 
+    <input type="text" [(ngModel)]="data"/>
+</div>

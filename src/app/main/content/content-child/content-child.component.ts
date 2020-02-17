@@ -9,7 +9,7 @@ import { DataService } from '../../../../service/data/data.service';
 })
 export class ContentChildComponent implements OnInit, AfterContentInit {
 
-  @ContentChild('dataBinding', {static: false}) firstChild: DataBindingComponent;
+  @ContentChild('dataBinding1', {static: false}) firstChild: DataBindingComponent;
   @ContentChildren(DataBindingComponent) children: QueryList<DataBindingComponent>;
   constructor(private dataService: DataService) { }
 
@@ -17,15 +17,10 @@ export class ContentChildComponent implements OnInit, AfterContentInit {
   }
 
   ngAfterContentInit() {
-    console.log(this.firstChild);
-    this.children.forEach(child => console.log(child));
-  }
-
-  get message(): string {
-    return this.dataService.message;
-  }
-
-  set message(newMessage: string) {
-    this.dataService.message = newMessage;
+    console.log('firstChild ', this.firstChild);
+    this.children.forEach((child, index) => {
+      console.log((index + 1) + ' child ', child);
+      console.log((index + 1) + ' child data ', child.data);
+    });
   }
 }

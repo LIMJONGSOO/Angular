@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
 
-import * as fromRoot from './store/reducers';
-
 
 @Component({
   selector: 'app-root',
@@ -12,7 +10,7 @@ import * as fromRoot from './store/reducers';
 export class AppComponent implements OnInit{
   title = 'myproject';
 
-  constructor(private store: Store<fromRoot.State>) {}
+  constructor() {}
 
   ngOnInit() { }
 }

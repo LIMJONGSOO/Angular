@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 //Http
-import { HttpService } from '../../../service/http/http.service';
+import { HttpService, Todo } from '../../../service/http/http.service';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-event-http',
@@ -9,8 +10,16 @@ import { HttpService } from '../../../service/http/http.service';
 })
 export class EventHttpComponent implements OnInit {
 
+  todos$: Observable<Todo[]>;
+  todos: Todo[];
+
   constructor(private httpService: HttpService) {
-    httpService.getTodos();
+    this.todos$ = httpService.getTodos();
+
+    this.todos$.subscribe(
+      todos => {
+        this.todos = todos;
+      });
   }
 
   ngOnInit() {

@@ -1,1 +1,16 @@
-<p>Welcome to the NgRx Tutorial Application, {{name$ | async}}!</p>
+<p>Welcome to the NgRx Tutorial Application, {{friendlyName$ | async}}!</p>
+
+<div style="border: 1px solid black; margin:10px; padding:10px;">
+    <p>Currnet Auth Store Data</p>
+    <p>Name :  {{name$ | async}}</p>
+    <p>friendlyName : {{friendlyName$ | async}}</p>
+</div>
+
+<div style="border: 1px solid black; margin:10px; padding:10px;">
+    <p>Store friendlyName change </p> 
+    <input type="text" (value)="name" (input)= "name = $event.target.value" placeholder="name">
+    <br/>
+    <input type="text" (value)="friendlyName" (input)= "friendlyName = $event.target.value" placeholder="friendlyName">
+    <br/>
+    <button (click)="dispatch()">Store dispatch</button>
+</div>

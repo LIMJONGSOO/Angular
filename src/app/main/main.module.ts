@@ -9,13 +9,14 @@ import { ContentChildComponent } from './content/content-child/content-child.com
 import { LifeCycleComponent } from './life-cycle/life-cycle.component'; 
 import { ObservableEventHttpComponent } from './observable-event-http/observable-event-http.component';
 import { FormComponent } from './form/form.component';
-import { ReactiveFormsModule } from '@angular/forms';
 import { NgrxDemoComponent } from './ngrx-demo/ngrx-demo.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   imports: [
     CommonModule,
     MainRouterModule,
+    FormsModule,
     ReactiveFormsModule,
   ],
   declarations: [

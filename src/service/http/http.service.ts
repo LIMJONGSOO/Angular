@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
-interface Todo {
+export interface Todo {
   id: number;
   content: string;
   completed: boolean;
@@ -16,9 +16,6 @@ export class HttpService {
   constructor(public http: HttpClient) { }
 
   getTodos() {
-    this.http.get<Todo[]>(this.url)
-      .subscribe(
-        todos => console.log('http todos get', todos )
-      );
+    return this.http.get<Todo[]>(this.url);
   }
 }

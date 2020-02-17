@@ -12,7 +12,7 @@ import {
   RouterStateSerializer
 } from "@ngrx/router-store";
 
-import { environment } from "../../../environments/environment";
+import { environment } from "../../environments/environment";
 import * as fromAuth from "./auth.reducer";
 import { Params, RouterStateSnapshot } from "@angular/router";
 import { Injectable } from "@angular/core";

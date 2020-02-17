@@ -2,7 +2,9 @@
 <div>
     <h3>@ContentChild @ContentChildren</h3>
     <app-content-child>
-      <app-data-binding #dataBinding></app-data-binding>
+      <app-data-binding #dataBinding1 [data]="'first child'"></app-data-binding>
+      <app-data-binding #dataBinding2 [data]="'second child'"></app-data-binding>
+      <app-data-binding #dataBinding3 [data]="'third child'"></app-data-binding>
       <footer>Footer Content</footer>
       <header>Header Content</header>
     </app-content-child>

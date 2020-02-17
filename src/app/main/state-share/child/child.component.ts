@@ -18,7 +18,7 @@ export class ChildComponent implements OnInit {
   ngOnInit() {
   }
 
-  test() {
+  output() {
     this.data = 'child change data';
     this.childEvent.emit(this.data);
   }

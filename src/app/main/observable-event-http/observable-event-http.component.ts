@@ -45,7 +45,7 @@ export class ObservableEventHttpComponent implements OnInit, OnDestroy {
         map(user => ({ login: user.login, name: user.name })),
         tap(console.log),
         catchError(err => {
-          if(err.status === 404) {
+          if (err.status === 404) {
             return of(`[ERROR] Not found user: ${userId}`);
           } else {
             return throwError(err);

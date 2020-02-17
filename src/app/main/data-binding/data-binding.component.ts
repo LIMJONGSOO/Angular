@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-data-binding',
@@ -6,10 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./data-binding.component.scss']
 })
 export class DataBindingComponent implements OnInit {
-  data: string;
+
+  @Input() data: string;
 
   constructor() {
-    this.data = 'test';
+    if (!this.data) { this.data = 'first data'; }
   }
 
   ngOnInit() {
