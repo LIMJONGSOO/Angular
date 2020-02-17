@@ -21,6 +21,13 @@ import { HttpService } from '../../../service/http/http.service';
 })
 export class ProviderComponent implements OnInit {
 
+
+  /*
+  RootClassProviderServiceService는 @Injectable({providedIn: 'root'})를 통해서 따로 provide를 안 받아도 사용할 수 있지만,
+  ClassProviderServiceService는 factory provider를 통해서 받음
+
+  */
+
   constructor(private classProviderServiceService: ClassProviderServiceService,
               private rootClassProviderServiceService: RootClassProviderServiceService,
               @Inject('CONFIG') public config: number,
@@ -30,7 +37,7 @@ export class ProviderComponent implements OnInit {
     console.log('InjectionToken ', appConfig);
     console.log('@Optional 선택적 의존성 주입 ', this.testService ? testService.getTodos() : 'test');
     console.log(`root class provider say '${rootClassProviderServiceService.sayHi()}'`);
-    console.log(`factory class provider say '${classProviderServiceService.sayHi()}'`); // ServiceProvider에서 factory provider를 통해서 받음
+    console.log(`factory class provider say '${classProviderServiceService.sayHi()}'`); 
   }
 
   ngOnInit() {
