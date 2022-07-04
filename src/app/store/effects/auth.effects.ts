@@ -17,13 +17,13 @@ export class AuthEffects {
   loadAuths$: Observable<Action> = this.actions$.pipe(
     ofType(authActions.AuthActionTypes.LoadAuths),
     switchMap(() => {
-      return this.http.get<any>(`https://swapi.co/api/people/1/`)
+      return this.http.get<any>(`https://api.github.com/users/LIMJONGSOO`)
         .pipe(
           map((person) => {
             const name: string = person.name;
             return new authActions.SetAuths({
               userName: name.replace(' ', ''),
-              friendlyName: name
+              friendlyName: person.login
             });
           })
         )

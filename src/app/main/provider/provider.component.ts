@@ -28,7 +28,7 @@ export class ProviderComponent implements OnInit {
               @Optional() public testService: HttpService ) {
     console.log(`config is ${config}`);
     console.log('InjectionToken ', appConfig);
-    console.log('@Optional 선택적 의존성 주입 ', this.testService ? testService.getTodos() : 'test');
+    console.log('@Optional 선택적 의존성 주입 ', this.testService ? this.testService.getTodos() : 'test');
     console.log(`root class provider say '${rootClassProviderServiceService.sayHi()}'`);
     console.log(`factory class provider say '${classProviderServiceService.sayHi()}'`); // ServiceProvider에서 factory provider를 통해서 받음
   }
